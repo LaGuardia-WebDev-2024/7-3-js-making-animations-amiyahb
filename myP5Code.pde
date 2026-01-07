@@ -5,7 +5,9 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var sunSize = 30; 
+var ladybugSize = 10;
 
+var x = 200
 
 //🟢Draw Function - Runs on Repeat
 draw = function(){
@@ -24,7 +26,18 @@ draw = function(){
   
   //ladybug
   fill(200,0,0);
-  ellipse(10, 350, 10, 10);
+  ellipse(x - 190, 350, 10, 10);
+
+  x = x + 10;
+  sunSize = sunSize + 9;
+
+  if(sunSize > 400){
+   sunSize = 30
+  }
+if(x > 900){
+   x = 10
+  }
+
 }
 
 
